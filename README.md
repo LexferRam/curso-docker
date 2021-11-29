@@ -42,3 +42,11 @@ Para solventar este problema debemos mapear el working directory de nuestra app 
 
  * docker run -v $(pwd):/app -d --name [name container] -p 3333:3333 [image name]
  * docker run -v $(pwd):/app -v /app/node_modules -d --name react-app -p 3000:3000 react-app
+
+# .dockerignore
+
+Normalmente no queremos incluir ahí el directorio .git, las bibliotecas descargadas ni los archivos compilados. El archivo .dockerignore es exactamente igual a .gitignore, por ejemplo:
+
+.git/ 
+node_modules/ 
+dist/
