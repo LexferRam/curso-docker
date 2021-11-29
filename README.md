@@ -69,4 +69,10 @@ Para solventar este problema debemos mapear el working directory de nuestra app 
 # Verificar todos los puerto que estan siendo usados en tu pc: **sudo lsof -nP | grep LISTEN**
 # Detener servicio que esta ocupando cierto puerto: **sudo systemctl stop apache2[<== este es el nombre del servicio "apache2"]**
 
+#.dockerignore
+
+Normalmente no queremos incluir ahí el directorio .git, las bibliotecas descargadas ni los archivos compilados. El archivo .dockerignore es exactamente igual a .gitignore, por ejemplo:
+
+.git/ node_modules/ dist/
+
 
